@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration) == 'Release'">
+        <DebugType>None</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(SplWasmBuild) != 'true'">
+        <PublishAot>true</PublishAot>
+        <DefineConstants>IS_NATIVE_AOT</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(SplWasmBuild) == 'true'">
+        <DefineConstants>$(DefineConstants);CODEGEN_WASM</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition="$(PublishAot) != 'true'">
+      <PackageReference Include="JetBrains.Annotations" Version="2023.2.0-eap3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="SDL2-CS\SDL2-CS.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="SDL2-CS\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="SDL2-CS\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="SDL2-CS\**" />
+    </ItemGroup>
+</Project>

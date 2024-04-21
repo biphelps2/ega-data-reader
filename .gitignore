@@ -1,0 +1,6 @@
+﻿.tool-versions
+.idea/
+bin/
+obj/
+*.DotSettings.user
+

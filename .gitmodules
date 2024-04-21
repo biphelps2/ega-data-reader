@@ -1,0 +1,3 @@
+[submodule "Spl.Core/SDL2-CS"]
+	path = Spl.Core/SDL2-CS
+	url = https://github.com/flibitijibibo/SDL2-CS.git
