@@ -74,14 +74,17 @@ namespace Spl.EgaFileReader
         {
             if (_nextFile.IsJustPressed)
             {
-                var allFilesInDir = Directory.GetFiles("/dosbox/games/ck/egas/", "*.EGA");
-                _currentFileIdx++;
+                var allFilesInDir = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.EGA");
 
-                _currentFileName = allFilesInDir[_currentFileIdx % allFilesInDir.Length];
+                if (allFilesInDir.Length > 0)
+                {
+                    _currentFileIdx++;
+                    _currentFileName = allFilesInDir[_currentFileIdx % allFilesInDir.Length];
 
-                _fileConverter.LoadFileData(_currentFileName);
+                    _fileConverter.LoadFileData(_currentFileName);
 
-                UpdateEgaTexture();
+                    UpdateEgaTexture();
+                }
             }
 
             if (_toggleBitPlaneCount.IsJustPressed)
