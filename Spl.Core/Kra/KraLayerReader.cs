@@ -12,13 +12,12 @@ namespace Spl.Core.Kra
     // Reads out layer data from a .kra (Krita) file.
     public class KraLayerReader : IDisposable
     {
-        private class KraLayerInfo
-        {
-            public string LayerName;
-            public int XOffset;
-            public int YOffset;
-            public byte Opacity;
-        }
+        private record KraLayerInfo(
+            string LayerName,
+            int XOffset,
+            int YOffset,
+            byte Opacity
+        );
 
         private IntPtr _renderer;
         private IntPtr _scratchSurface;
@@ -196,13 +195,12 @@ namespace Spl.Core.Kra
                     // Get layer info.
                     var fileName = reader.GetAttribute("filename")!;
 
-                    _fileNameToLayerName.Add(fileName, new KraLayerInfo
-                    {
-                        LayerName = currentGroupLayer + reader.GetAttribute("name")!,
-                        XOffset = int.Parse(reader.GetAttribute("x")!),
-                        YOffset = int.Parse(reader.GetAttribute("y")!),
-                        Opacity = byte.Parse(reader.GetAttribute("opacity")!)
-                    });
+                    _fileNameToLayerName.Add(fileName, new KraLayerInfo(
+                        LayerName: currentGroupLayer + reader.GetAttribute("name")!,
+                        XOffset: int.Parse(reader.GetAttribute("x")!),
+                        YOffset: int.Parse(reader.GetAttribute("y")!),
+                        Opacity: byte.Parse(reader.GetAttribute("opacity")!)
+                        ));
 
                     mostRecentLayer = reader.GetAttribute("name")!;
                 }
