@@ -1,0 +1,101 @@
+﻿using Spl.Core.Font;
+
+namespace Spl.EgaFileReader
+{
+    public static class TextureFonts
+    {
+        // Free with attribution from: https://managore.itch.io/m3x6
+        // a font by Daniel Linssen
+        public static readonly TextureFont M3x6 = new(8, new Dictionary<char, Glyph>
+        {
+            { 'A', new Glyph { OffsetX = 4, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'B', new Glyph { OffsetX = 12, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'C', new Glyph { OffsetX = 20, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'D', new Glyph { OffsetX = 28, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'E', new Glyph { OffsetX = 36, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'F', new Glyph { OffsetX = 44, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'G', new Glyph { OffsetX = 52, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'H', new Glyph { OffsetX = 60, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'I', new Glyph { OffsetX = 68, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'J', new Glyph { OffsetX = 78, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'K', new Glyph { OffsetX = 88, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'L', new Glyph { OffsetX = 96, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'M', new Glyph { OffsetX = 106, OffsetY = 0, SizeX = 5, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'N', new Glyph { OffsetX = 4, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'O', new Glyph { OffsetX = 12, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'P', new Glyph { OffsetX = 20, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'Q', new Glyph { OffsetX = 28, OffsetY = 8, SizeX = 3, SizeY = 7, BaselineOffsetY = 1 } },
+            { 'R', new Glyph { OffsetX = 36, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'S', new Glyph { OffsetX = 44, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'T', new Glyph { OffsetX = 52, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'U', new Glyph { OffsetX = 60, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'V', new Glyph { OffsetX = 68, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'W', new Glyph { OffsetX = 78, OffsetY = 8, SizeX = 5, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'X', new Glyph { OffsetX = 88, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'Y', new Glyph { OffsetX = 96, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'Z', new Glyph { OffsetX = 106, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+
+            { 'a', new Glyph { OffsetX = 0, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'b', new Glyph { OffsetX = 8, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'c', new Glyph { OffsetX = 16, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'd', new Glyph { OffsetX = 24, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'e', new Glyph { OffsetX = 32, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'f', new Glyph { OffsetX = 40, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'g', new Glyph { OffsetX = 48, OffsetY = 0, SizeX = 3, SizeY = 8, BaselineOffsetY = 2 } },
+            { 'h', new Glyph { OffsetX = 56, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'i', new Glyph { OffsetX = 64, OffsetY = 0, SizeX = 1, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'j', new Glyph { OffsetX = 72, OffsetY = 0, SizeX = 2, SizeY = 8, BaselineOffsetY = 2 } },
+            { 'k', new Glyph { OffsetX = 84, OffsetY = 0, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'l', new Glyph { OffsetX = 92, OffsetY = 0, SizeX = 2, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'm', new Glyph { OffsetX = 100, OffsetY = 0, SizeX = 5, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'n', new Glyph { OffsetX = 0, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'o', new Glyph { OffsetX = 8, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'p', new Glyph { OffsetX = 16, OffsetY = 8, SizeX = 3, SizeY = 8, BaselineOffsetY = 2 } },
+            { 'q', new Glyph { OffsetX = 24, OffsetY = 8, SizeX = 3, SizeY = 8, BaselineOffsetY = 2 } },
+            { 'r', new Glyph { OffsetX = 32, OffsetY = 8, SizeX = 2, SizeY = 6, BaselineOffsetY = 0 } },
+            { 's', new Glyph { OffsetX = 40, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 't', new Glyph { OffsetX = 48, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'u', new Glyph { OffsetX = 56, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'v', new Glyph { OffsetX = 64, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'w', new Glyph { OffsetX = 72, OffsetY = 8, SizeX = 5, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'x', new Glyph { OffsetX = 84, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { 'y', new Glyph { OffsetX = 92, OffsetY = 8, SizeX = 3, SizeY = 8, BaselineOffsetY = 2 } },
+            { 'z', new Glyph { OffsetX = 100, OffsetY = 8, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+
+            { '0', new Glyph { OffsetX = 0, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '1', new Glyph { OffsetX = 4, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '2', new Glyph { OffsetX = 8, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '3', new Glyph { OffsetX = 12, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '4', new Glyph { OffsetX = 16, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '5', new Glyph { OffsetX = 20, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '6', new Glyph { OffsetX = 24, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '7', new Glyph { OffsetX = 28, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '8', new Glyph { OffsetX = 32, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '9', new Glyph { OffsetX = 36, OffsetY = 16, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+
+            { '!', new Glyph { OffsetX = 1, OffsetY = 37, SizeX = 1, SizeY = 6, BaselineOffsetY = 0 } },
+            { '?', new Glyph { OffsetX = 8, OffsetY = 37, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { ',', new Glyph { OffsetX = 19, OffsetY = 37, SizeX = 1, SizeY = 7, BaselineOffsetY = 1 } },
+            { '.', new Glyph { OffsetX = 28, OffsetY = 37, SizeX = 1, SizeY = 6, BaselineOffsetY = 0 } },
+            { ';', new Glyph { OffsetX = 37, OffsetY = 37, SizeX = 1, SizeY = 6, BaselineOffsetY = 0 } },
+            { ':', new Glyph { OffsetX = 46, OffsetY = 37, SizeX = 1, SizeY = 6, BaselineOffsetY = 0 } },
+            { '\'', new Glyph { OffsetX = 55, OffsetY = 37, SizeX = 1, SizeY = 6, BaselineOffsetY = 0 } },
+            // Start of quotes
+            { '<', new Glyph { OffsetX = 63, OffsetY = 41, SizeX = 4, SizeY = 3, BaselineOffsetY = -3 } },
+            // End of quotes
+            { '>', new Glyph { OffsetX = 62, OffsetY = 37, SizeX = 4, SizeY = 3, BaselineOffsetY = -3 } },
+            { '/', new Glyph { OffsetX = 72, OffsetY = 37, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '_', new Glyph { OffsetX = 99, OffsetY = 37, SizeX = 3, SizeY = 6, BaselineOffsetY = 0 } },
+            { '(', new Glyph { OffsetX = 1, OffsetY = 47, SizeX = 2, SizeY = 7, BaselineOffsetY = 0 } },
+            { ')', new Glyph { OffsetX = 9, OffsetY = 47, SizeX = 2, SizeY = 7, BaselineOffsetY = 0 } },
+            { '[', new Glyph { OffsetX = 19, OffsetY = 47, SizeX = 2, SizeY = 7, BaselineOffsetY = 0 } },
+            { ']', new Glyph { OffsetX = 27, OffsetY = 47, SizeX = 2, SizeY = 7, BaselineOffsetY = 0 } },
+            { '#', new Glyph { OffsetX = 80, OffsetY = 47, SizeX = 5, SizeY = 6, BaselineOffsetY = 0 } },
+
+            { '+', new Glyph { OffsetX = 0, OffsetY = 59, SizeX = 3, SizeY = 5, BaselineOffsetY = 0 } },
+            { '-', new Glyph { OffsetX = 9, OffsetY = 59, SizeX = 3, SizeY = 5, BaselineOffsetY = 0 } },
+            { '=', new Glyph { OffsetX = 36, OffsetY = 59, SizeX = 3, SizeY = 5, BaselineOffsetY = 1 } },
+            { ' ', new Glyph { OffsetX = 0, OffsetY = 30, SizeX = 2, SizeY = 1, BaselineOffsetY = 0 } },
+        });
+    }
+}

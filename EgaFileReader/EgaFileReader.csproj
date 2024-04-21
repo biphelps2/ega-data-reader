@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>efr</AssemblyName>
+        <RootNamespace>Spl.EgaFileReader</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Spl.Core\Spl.Core.csproj" />
+    </ItemGroup>
+	
+	<ItemGroup>
+		<None Update="font-3x6.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="icon.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup Condition="$(RuntimeIdentifier) == 'linux-x64'">
+		<None Include="dependencies\libSDL2_image-2.0.so.0.600.3" Link="\libSDL2_image.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="dependencies\libSDL2_mixer-2.0.so.0.600.3" Link="\libSDL2_mixer.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="dependencies\libSDL2-2.0.so.0.2400.0" Link="\libSDL2.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup Condition="$(RuntimeIdentifier) == 'win-x64'">
+		<None Include="dependencies\libpng16-16.dll" Link="\%(Filename)%(Extension)">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="dependencies\SDL2.dll" Link="\%(Filename)%(Extension)">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="dependencies\SDL2_mixer.dll" Link="\%(Filename)%(Extension)">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="dependencies\SDL2_image.dll" Link="\%(Filename)%(Extension)">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>
