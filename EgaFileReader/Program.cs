@@ -28,14 +28,19 @@ namespace Spl.EgaFileReader
             else
             {
                 // Comand line mode.
-                var inputPath = "/dosbox/games/ck/egas/PCCHARS.EGA";
+                string inputPath;
                 var inputArgPosition = Math.Max(args.ToList().IndexOf("-i"), args.ToList().IndexOf("--input"));
                 if (inputArgPosition != -1 && inputArgPosition < args.Length - 1)
                 {
                     inputPath = args[inputArgPosition + 1];
                 }
+                else
+                {
+                    Console.WriteLine("Must specify input path.");
+                    return;
+                }
 
-                var outputPath = "/dosbox/games/ck/egas/PCCHARS.png";
+                var outputPath = Path.Join(Directory.GetCurrentDirectory(), "output.png");
                 var outputArgPosition = Math.Max(args.ToList().IndexOf("-o"), args.ToList().IndexOf("--output"));
                 if (outputArgPosition != -1 && outputArgPosition < args.Length - 1)
                 {
