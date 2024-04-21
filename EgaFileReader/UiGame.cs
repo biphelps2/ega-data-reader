@@ -35,7 +35,7 @@ namespace Spl.EgaFileReader
         private int _numBitPlanes;
 
         public UiGame()
-            : base("EGA data processor", 400, 250, 3)
+            : base("EGA File Reader", 400, 250, 3)
         {
             _nextFile = new Control(
                 (int)SDL.SDL_Scancode.SDL_SCANCODE_N);
