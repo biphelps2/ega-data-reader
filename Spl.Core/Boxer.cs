@@ -28,7 +28,7 @@ namespace Spl.Core
         public void OnWindowSizeChanged(Rectangle wClientBounds)
         {
 
-            BasicLogger.LogInfo($"Window resized: {wClientBounds.Width}, {wClientBounds.Height}");
+            BasicLogger.LogDetail($"Window resized: {wClientBounds.Width}, {wClientBounds.Height}");
             var currentScreenRatio = wClientBounds.Width / (float)wClientBounds.Height;
 
             if (currentScreenRatio < _nativeAspectRatio)

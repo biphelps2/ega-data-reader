@@ -37,7 +37,7 @@ namespace Spl.Core
         static SdlGame()
         {
             BasePath ??= SDL.SDL_GetBasePath();
-            BasicLogger.LogInfo("Base path set: " + BasePath);
+            BasicLogger.LogDetail("Base path set: " + BasePath);
         }
 
         public SdlGame(string windowTitle, int baseWidth, int baseHeight, int initialScale)
@@ -90,7 +90,7 @@ namespace Spl.Core
             {
                 BasicLogger.LogError($"There was an issue creating the window. {SDL.SDL_GetError()}");
             }
-            
+
             // Set window icon, if image is available.
             var icon = SDL_image.IMG_Load("icon.png");
             if (icon != IntPtr.Zero)
@@ -119,7 +119,7 @@ namespace Spl.Core
                 BasicLogger.LogError("Get Renderer Output Size error: " + SDL.SDL_GetError());
             }
 
-            BasicLogger.LogInfo($"Renderer created. Requested {BaseWidth * InitialScale} {BaseHeight * InitialScale}, got {w} {h}");
+            BasicLogger.LogDetail($"Renderer created. Requested {BaseWidth * InitialScale} {BaseHeight * InitialScale}, got {w} {h}");
 
             Texture2D.Renderer = Renderer;
 

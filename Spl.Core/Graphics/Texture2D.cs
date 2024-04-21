@@ -25,7 +25,7 @@ namespace Spl.Core.Graphics
 
             var fullPath = Path.Join(SdlGame.BasePath, path);
 
-            BasicLogger.LogInfo("Loading texture from: " + fullPath);
+            BasicLogger.LogDetail("Loading texture from: " + fullPath);
 
             var readableTexHopefully = SDL_image.IMG_Load(fullPath);
             if (readableTexHopefully == IntPtr.Zero)

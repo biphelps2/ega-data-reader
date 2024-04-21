@@ -1,9 +1,13 @@
-﻿namespace Spl.EgaFileReader
+﻿using Spl.Core;
+
+namespace Spl.EgaFileReader
 {
     public static class Program
     {
         public static void Main(string[] args)
         {
+            BasicLogger.SetName("efr");
+
             if (args.Contains("-h") || args.Contains("--help"))
             {
                 Console.WriteLine("Usage: efr [-u] -i FILEPATH -o OUTPATH -t 32x32 -p 4");
