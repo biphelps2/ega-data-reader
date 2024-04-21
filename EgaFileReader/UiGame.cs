@@ -89,18 +89,12 @@ namespace Spl.EgaFileReader
 
             if (_toggleBitPlaneCount.IsJustPressed)
             {
-                if (_numBitPlanes == 4)
+                _numBitPlanes = _numBitPlanes switch
                 {
-                    _numBitPlanes = 2;
-                }
-                else if (_numBitPlanes == 2)
-                {
-                    _numBitPlanes = 1;
-                }
-                else
-                {
-                    _numBitPlanes = 4;
-                }
+                    4 => 2,
+                    2 => 1,
+                    _ => 4
+                };
 
                 UpdateEgaTexture();
             }
@@ -194,17 +188,13 @@ namespace Spl.EgaFileReader
             }
         }
 
-        public void UpdateEgaTexture()
+        private void UpdateEgaTexture()
         {
             if (!_fileConverter.FileIsLoaded)
             {
                 BasicLogger.LogError("Tried to update texture, but no file loaded.");
                 return;
             }
-
-            // References:
-            // ProgrammersReferenceGuide2ndEd_BradleyDyckKliewer
-            // - This describes the bit planes.
 
             var numTilesInFile = _fileConverter.NumTilesInFile(_tileWidth, _tileHeight, _numBitPlanes);
             var requiredFileHeight = (numTilesInFile / _numTilesWide) * _tileHeight;
@@ -230,7 +220,6 @@ namespace Spl.EgaFileReader
             _dataVisualised = Texture2D.FromData(_data,
                 _numTilesWide * _tileWidth,
                 requiredFileHeight);
-
         }
 
         public override void Draw()
